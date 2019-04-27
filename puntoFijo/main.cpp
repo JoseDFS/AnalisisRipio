@@ -8,7 +8,7 @@ using std::abs;		using std::setprecision;
 // FunciÃ³n para IPF
 inline double g(double x){
 	double a=exp(x);
-	double b=x^2;
+	double b= pow(x,2);
 	return (2.0-a+b)/3.0;
 }
 
@@ -45,6 +45,8 @@ int main(){
 }
 
 /*  
+Si  k < 1 positivo ... pfijo unico
+
 Para saber que metodo es mas rapido:
 - k=abs(dev(g(p)))
 -k>0.5 IPF mas lento
@@ -54,5 +56,9 @@ Para saber que metodo es mas rapido:
 Para numero de iteraciones:
 - k= fmax(abs(g’(x)),x,a,b)
 - n>= (log(Error/max((b-p0),(p0-a)))/logk)
+
+Para sacar una funcoin g adecuada que permita que esa funcion converga a una raiz k en un intervalo
+se van sacando diferentes derivadas y las evaluas en las fronteras. .. si te dan en el rango esa funcion tomas
+
 
 */

@@ -4,10 +4,20 @@
 
 using std::cout;	using std::endl;
 using std::abs;		using std::setprecision;
-
+// g(a)∈[a,b] y g(b)∈[a,b]
+// k = fmax(∣g′(x)∣,x,a,b)
+//si  k < 1 positivo ... pfijo unico
 // FunciÃ³n para IPF
-inline long double g(long double x){ return (2.0 - exp(x) + pow(x, 2))/3.0;  }
-
+inline double gx(double x){
+	double a=exp(x);
+	double b=pow(x,2.0);
+	return ((2.0-a+b)/3.0);
+}
+inline double g(double x){
+	double a=sin(x);
+	double b=pow(x,2.0);
+	return 1.0 + pow(a,2);
+}
 // Inline para calcular cada tÃ©rmino de la sucesiÃ³n de Aitken
 inline double p_hat(double p0, double p1, double p2){ return p0 - pow( p1-p0 , 2.0)/(p2 - 2.0*p1 + p0);}
 
@@ -47,7 +57,7 @@ void aitken(double p0, int Nmax, double T){
 
 int main(){
 
-	aitken(0, 100, pow(10, -9));		
+	aitken(1.5, 100, pow(10, -9));		
 	
 	return 0;
 }

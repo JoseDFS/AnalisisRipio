@@ -5,18 +5,26 @@
 using std::cout;	using std::endl;
 using std::abs;		using std::setprecision;
 
-// FunciÃ³n para IPF
-inline long double g(long double x){ return (2.0 - exp(x) + pow(x, 2))/3.0;  }
+// g(a)?[a,b] y g(b)?[a,b]
+// k = fmax(?g?(x)?,x,a,b)
+//si  k < 1 positivo ... pfijo unico
+// Función para IPF
+inline double g(double x){
+	double a=exp(x);
+	double b=pow(x,2.0);
+	return ((2.0-a+b)/3.0);
+}
 
 
-// Inline para calcular cada tÃ©rmino de la sucesiÃ³n de Aitken
+
+// Inline para calcular cada término de la sucesión de Aitken
 inline long double p_hat(long double p0,long double p1,long double p2){ return p0 - pow( p1-p0 , 2.0)/(p2 - 2.0*p1 + p0);}
 
 /*
-p0: aproximaciÃ³n inicial
-Nmax: nÃºmero mÃ¡ximo de iteraciones
+p0: aproximación inicial
+Nmax: número máximo de iteraciones
 T: tolerancia
-Si no se usa long double, algÃºn dato se puede aproximar a 0
+Si no se usa long double, algún dato se puede aproximar a 0
 */
 void steffensen(long double p0, int Nmax, long double T){
 
