@@ -34,3 +34,25 @@ bisection(f, a, b, 0.2)
 
 
 
+
+#//Ventajas del Método de Bisección.
+ 
+#// Es siempre convergente.
+#//Es óptimo para resolver una ecuación f(x)=0 cuando no se sabe nada de f, excepto calcular su signo.
+#//Requiere que f sea continua en el intervalo especificado.
+#//Se basa en el Teorema de Bolzano.
+#//Se puede establecer el límite de error.
+#//Es fácil de implementar.
+
+#//Desventajas del Método de Bisección.
+ 
+#//Converge muy lentamente.
+#//Permite encontrar solo una raíz, aunque existan más en el intervalo.
+#//Algunas veces la determinación del intervalo inicial no es muy fácil.
+#//A veces, no es obvio el criterio de finalización del proceso iteractivo.
+#//No puede determinar raíces complejas.
+#//Es difícil generalizarlo para dimensiones superiores.
+
+
+
+

@@ -44,3 +44,17 @@ int main(){
 	//cout<< setprecision(20)<<(df(1))<<endl;
 	return 0;
 }
+
+
+
+//Condiciones
+//Dentro del intervalo de trabajo [a,b], la derivada de f(x) debe ser diferente de cero.
+//Dado un cierto intervalo de trabajo [a,b], dentro del mismo debe cumplirse que f(a)*f(b)<0.
+//No lo vimos en la clase el siguiente
+//La gráfica de la función f(x) dentro del intervalo de trabajo [a,b], debe ser cóncava, hacia arriba o hacia abajo. Para ello debe verificarse que :
+//f ''(x) <= 0   ó   f ''(x) >= 0   para todo x que pertenezca a [a,b] 
+
+
+//Orden de covergencia. (Quizas les sirva)
+//Supongamos que{pn}∞n=0 es una sucesión que converge a p, con pn distinto p para todas las aproximaciones pn. Si existen constantes positivas α y λ con lim n→∞ |pn+1−p|/(|pn−p|)**α = λ  entonces {pn}∞n=0 converge a p con orden α y constante de error asintótica λ.Si α=1 y λ <1, la sucesión es linealmente convergente. Si α = 2,la sucesión es cuadráticamente convergente.
+
