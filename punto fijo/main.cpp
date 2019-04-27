@@ -44,9 +44,15 @@ int main(){
 	return 0;
 }
 
-/* 
-- max|dev(g(x))|,a,b = k
--k>0.5 IPF mas rapido
--k<0.5 biseccion mas rapido
-k=0.5 son igual de rapido
+/*  
+Para saber que metodo es mas rapido:
+- k=abs(dev(g(p)))
+-k>0.5 IPF mas lento
+-k<0.5 biseccion mas lento
+-k=0.5 son igual de rapido
+
+Para numero de iteraciones:
+- k= fmax(abs(g’(x)),x,a,b)
+- n>= (log(Error/max((b-p0),(p0-a)))/logk)
+
 */

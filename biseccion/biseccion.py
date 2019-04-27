@@ -29,6 +29,8 @@ def bisection(f, a, b, T):
 bisection(f, a, b, 0.2)
 #print ( f(1)) 
 
+#Teorema del valor intermedio Sea f: [a,b]→R función continua y K cualquier número real que satisface o bien f(a)<K<f(b)of(b)<K<f(a).
+# Entonces existe un c ∈ (a,b) tal que f(c) = K.En particular, si f(a) y f(b) tienen signos opuestos, se diceque debe existir un ce ntre a y b tal que f(c) =0.
 
 
 
